@@ -1,0 +1,122 @@
+// === Page ===
+body,
+html {
+  color: var(--color-text-1);
+  height: 100%;
+}
+
+// === Main ===
+body,
+.container {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  .content {
+    align-items: center;
+    bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 50%;
+    max-width: 100%;
+    position: fixed;
+    transform: translateX(-50%);
+  }
+
+  .boardCastIcon {
+    color: rgba(var(--arcoblue-6), 0.8);
+    font-size: 60px;
+    text-align: center;
+  }
+
+  .manualEntry {
+    color: rgba(var(--arcoblue-6), 0.8);
+    cursor: pointer;
+    margin-top: 5px;
+    text-align: center;
+    white-space: nowrap;
+  }
+}
+
+.prompt {
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-name: scale-in;
+  color: rgba(var(--arcoblue-6), 0.8);
+  font-size: 20px;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  top: 40%;
+  user-select: none;
+  width: 100%;
+}
+
+// === Banner ===
+.github {
+  color: var(--color-text-1);
+  font-size: 23px;
+  position: fixed;
+  right: 12px;
+  top: 6px;
+}
+
+@keyframes scale-in {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// === Device ===
+.deviceGroup {
+  display: flex;
+  font-size: 14px;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 40%;
+  user-select: none;
+  width: 100%;
+
+  .device {
+    align-items: center;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-name: scale-in;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
+    flex-wrap: wrap;
+    margin: 20px;
+
+    .icon {
+      align-items: center;
+      background-color: rgba(var(--arcoblue-6), 0.8);
+      border-radius: 70px;
+      color: #fff;
+      display: flex;
+      font-size: 35px;
+      height: 70px;
+      justify-content: center;
+      width: 70px;
+    }
+
+    .name {
+      color: var(--color-text-1);
+      margin-top: 6px;
+    }
+  }
+}
